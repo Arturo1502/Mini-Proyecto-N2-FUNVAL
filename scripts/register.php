@@ -15,7 +15,7 @@
 
 
     <!-- styles -->
-    <link rel="stylesheet" href="./styles/styleIndex.css">
+    <link rel="stylesheet" href="/styles/stylelogin.css">
     <title>REGISTER</title>
 </head>
 
@@ -24,25 +24,21 @@
         <div class="container">
             <div class="content">
                 <div class="logo">
-                    <img src="./assets/devchallenges.svg" alt="devchallenge icon">
+                    <img src="/assets/devchallenges.svg" alt="devchallenge icon">
                 </div>
 
                 <div class="subtitle">
-                    <h2>Join thousand of learners from around the world</h2>
+                    <h2>Login</h2>
                 </div>
-
-                <div class="parrafo">
-                    <p>Master web development by making real-life projects. There are multiple paths for you to choose</p>
-                </div>
-
                 <form action="" method="post">
                     <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email">
 
                     <input class="placeholderPass" type="password" name="password" id="password" placeholder="Password">
                 </form>
 
-                <button class="submitRegister" type="submit">Start coding now</button>
+                <button class="submitRegister" type="submit">Login</button>
             </div>
+            <a class="forgotPass" href="">Forgot password?</a>
             <p class="conectWith">or continue with these social profile</p>
             <div class="redesSociales">
                 <buttom><img src="/assets/Google.svg" alt="logo de google"></buttom>
@@ -52,14 +48,15 @@
             </div>
             <div class="login">
                 <p>Already member?</p>
-                <a class="linkLogin" href="/scripts/register.php">Login</a>
+                <a class="linkLogin" href="/index.php">Register</a>
             </div>
 
         </div>
         <div class="credits">
             <p>Created by </p>
             <a href="https://www.linkedin.com/in/juan-perez-97727b170/" target="_blank">
-                <NAME>ArturoA</a>
+                <NAME>ArturoA
+            </a>
         </div>
     </div>
 
