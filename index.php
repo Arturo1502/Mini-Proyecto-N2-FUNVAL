@@ -17,6 +17,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="./styles/styleIndex.css">
     <title>REGISTER</title>
+    <link rel="shortcut icon" href="/assets/devchallenges.png">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             </div>
             <div class="login">
                 <p>Already member?</p>
-                <a class="linkLogin" href="/scripts/register.php">Login</a>
+                <a class="linkLogin" href="/scripts/login.php">Login</a>
             </div>
 
         </div>
