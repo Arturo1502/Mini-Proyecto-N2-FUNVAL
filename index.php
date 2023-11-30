@@ -1,3 +1,9 @@
+<?php
+require_once('scripts/conn.php');
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,20 +42,22 @@
                     <p>Master web development by making real-life projects. There are multiple paths for you to choose</p>
                 </div>
 
-                <form action="" method="post">
-                    <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email">
+                <form action="/scripts/userRegistered.php" method="post">
+                    <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email" required>
 
-                    <input class="placeholderPass" type="password" name="password" id="password" placeholder="Password">
+                    <input class="placeholderPass" type="password" name="password" id="password" placeholder="Password" required>
+
+                    <button class="submitRegister" type="submit">Start coding now</button>
                 </form>
 
-                <button class="submitRegister" type="submit">Start coding now</button>
+
             </div>
             <p class="conectWith">or continue with these social profile</p>
             <div class="redesSociales">
-                <buttom><img src="/assets/Google.svg" alt="logo de google"></buttom>
-                <buttom><img src="/assets/Facebook.svg" alt="logo de facebook"></buttom>
-                <buttom><img src="/assets/Twitter.svg" alt="logo de twitter"></buttom>
-                <buttom><img src="/assets/Gihub.svg" alt="logo de github"></buttom>
+                <a href="https://www.google.com/" target="_blank"><img src="/assets/Google.svg" alt="logo de google"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="/assets/Facebook.svg" alt="logo de facebook"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="/assets/Twitter.svg" alt="logo de twitter"></a>
+                <a href="https://www.github.com/" target="_blank"><img src="/assets/Gihub.svg" alt="logo de github"></a>
             </div>
             <div class="login">
                 <p>Already member?</p>
@@ -59,8 +67,9 @@
         </div>
         <div class="credits">
             <p>Created by </p>
-            <a href="https://www.linkedin.com/in/juan-perez-97727b170/" target="_blank">
-                <NAME>ArturoA</a>
+            <a href="https://www.linkedin.com/in/arturo-octavio-alvarez-zapata-b152571a3/" target="_blank">
+                <NAME>ArturoA
+            </a>
         </div>
     </div>
 
