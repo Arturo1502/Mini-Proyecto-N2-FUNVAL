@@ -7,9 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 
-    $stmt = $pdo->prepare("INSERT INTO usuarios (`email`, `password`) VALUES (?, ?)");
-    $stmt->execute([$email, $password]);
+    $query = "INSERT INTO usuarios (`email`, `password`) VALUES (?, ?)";
+    
 
-    header('location:./personalInfo.php');
+    try {
+        //code...
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
+    header('location:../personalInfo.php');
 }
 ?>

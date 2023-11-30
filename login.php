@@ -32,7 +32,7 @@
                 <div class="subtitle">
                     <h2>Login</h2>
                 </div>
-                <form action="/scripts/personalInfo.php" method="post">
+                <form action="./personalInfo.php" method="post">
                     <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email">
 
                     <input class="placeholderPass" type="password" name="password" id="password" placeholder="Password">

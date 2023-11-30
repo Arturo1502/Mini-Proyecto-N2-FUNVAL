@@ -8,23 +8,21 @@ function myFunction() {
     }
 }
 
+
 function toggleDropdown() {
-    
-    
-    let dropdownContent = document.querySelector('.dropdown-content');
-    dropdownContent.classList.toggle('show');
+    let dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.toggle("show");
 }
 
-// Cerrar el dropdown si el usuario hace clic fuera de él
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
-        let dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach((openDropdown) => {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
-        });
+        }
     }
-}
-
-
+};

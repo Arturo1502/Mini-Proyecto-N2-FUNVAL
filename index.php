@@ -50,7 +50,6 @@ require_once('scripts/conn.php');
                     <button class="submitRegister" type="submit">Start coding now</button>
                 </form>
 
-
             </div>
             <p class="conectWith">or continue with these social profile</p>
             <div class="redesSociales">
@@ -61,7 +60,7 @@ require_once('scripts/conn.php');
             </div>
             <div class="login">
                 <p>Already member?</p>
-                <a class="linkLogin" href="/scripts/login.php">Login</a>
+                <a class="linkLogin" href="./login.php">Login</a>
             </div>
 
         </div>
