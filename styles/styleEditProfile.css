@@ -117,7 +117,7 @@
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .show {
@@ -131,14 +131,16 @@
         flex-direction: row;
         align-items: right;
         justify-content: space-between;
-        margin: 15px 10px; 
-}
-.namePhoto {
-    width: 30%;
-}
-.iconoNavbar{
-    display: flex;
-}
+        margin: 15px 10px;
+    }
+
+    .namePhoto {
+        width: 30%;
+    }
+
+    .iconoNavbar {
+        display: flex;
+    }
 
 
 }
@@ -151,35 +153,36 @@
         margin: 0;
     }
 
-   
+
     .topnav a {
         float: none;
         display: block;
         text-align: center;
         width: 100%;
     }
+
     .topnav a:not(:first-child) {
         display: none;
     }
-    
-    .iconoNavbar{
+
+    .iconoNavbar {
         display: none;
     }
 
-    .dropdown-content{
-        
+    .dropdown-content {
+
         top: 10px;
         height: auto;
     }
 
-    .contenidoDrop{
+    .contenidoDrop {
         display: block;
         align-items: center;
         display: inline-block;
         margin: 14px 16px;
     }
 
-    
+
 }
 
 
@@ -198,23 +201,22 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+
+    margin-bottom: 20px;
+
+
 }
 
-.title h1{    
-        font-size: 36px;
-        font-weight: 450;
-        letter-spacing: -0.015em;
-        text-align: left;
-}
-
-.title h2{
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: -0.035em;
+.title a {
+    font-size: 19px;
+    font-weight: 550;
+    letter-spacing: -0.015em;
     text-align: left;
+    text-decoration: none;
+    color: #2D9CDB;
 }
+
+
 
 .container {
     display: flex;
@@ -228,81 +230,138 @@
     margin-right: auto;
 }
 
-.contenido {
-
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-hr{
-    width: 100%;
-    color: #BDBDBD;
-}
-
-
 .encabezado {
     width: 90%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-.edit {
-    padding: 10px 20px;
-    background-color: #FAFAFA;
-    width: 90px;
-    border: 1px solid #828282;
-    border-radius: 12px;
-    cursor: pointer;
+.encabezado h1 {
+    margin-bottom: 10px;
 }
 
-.edit:hover {
-    background-color: #ededed;
+.encabezado h2 {
+    margin-top: 10px;
 }
 
-
-.edit>a {
-    color: #828282;
-    text-decoration: none;
-    font-family: 'Noto Sans', sans-serif;
-
-}
-
-.primerArea{
+.primerArea {
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
     width: 90%;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.primerArea > .derecha > img{
+.photoUser {
+    width: 80px;
+    height: 80px;
+}
+
+.izquierda1 {
+    position: relative;
+}
+
+.izquierda1>a {
+    display: flex;
+    position: absolute;
+    font-size: 25px;
+    top: 25px;
+    left: 25px;
+    color: #BDBDBD;
+
+}
+
+.primerArea>.derecha1>a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    margin-left: 55px;
+    color: #828282;
+}
+
+.editForm {
+    display: block;
+
+    width: 90%;
+    position: relative;
+    margin: 10px auto;
+}
+
+.editForm>form {
+    display: block;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+form .area input {
+    display: block;
+    width: 50%;
+    height: 60px;
+    border-radius: 2px;
+    border: 1px solid #828282;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+form .bioArea input {
+
+    display: block;
+    width: 50%;
+    min-height: 110px;
+    border-radius: 2px;
+    border: 1px solid #828282;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+form label {
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    color: #828282;
+
+}
+
+.area {
+    margin-top: 24px;
+}
+
+.bioArea {
+    margin-top: 24px;
+}
+
+.btn {
+    margin: 24px;
+    margin-left: 0;
+    width: 82px;
+    height: 38px;
+    background-color: #2F80ED;
+    color: #ffffff;
+    border: 2px solid #008CBA;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #4073b5;
+    color: white;
+}
+
+.primerArea > .izquierda1 > img{
     object-fit: cover;
     width: 70px;
     height: 70px;
-}
-
-.areas{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* justify-content: space-between; */
-    width: 90%;
-}
-
-.areaUltima{
-    display: flex;
-    flex-direction: row ;
-    width: 90%;
-}
-
-.izquierda{
-    width: 15%;
-}
-
-.derecha{
-    margin-left: 25px;
 }
 
 
@@ -313,21 +372,14 @@ hr{
 }
 
 
-
-
-
-
-
-
-
 .credits {
     font-family: 'Noto Sans', sans-serif;
     color: #828282;
     font-weight: 1000;
-    width: 29%;
+    width: 100%;
     margin-top: -10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    
 }

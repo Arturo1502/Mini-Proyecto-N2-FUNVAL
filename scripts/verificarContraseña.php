@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$email]);
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
+        echo $result['name'];
         if ($result) {
             if (password_verify($password, $result['password'])) {
                 session_start();

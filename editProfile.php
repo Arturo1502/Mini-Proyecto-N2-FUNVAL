@@ -11,7 +11,6 @@ if (isset($_SESSION['datoUsuario'])) {
     // echo "No dato";
     header('location: ./login.php');
 }
-
 ?>
 
 
@@ -21,11 +20,11 @@ if (isset($_SESSION['datoUsuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal info</title>
+    <title>Edit Perfil</title>
     <link rel="shortcut icon" href="/assets/devchallenges.png">
     <!-- CSS -->
 
-    <link rel="stylesheet" href="/styles/stylePersonalInfo.css">
+    <link rel="stylesheet" href="/styles/styleEditProfile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -34,6 +33,7 @@ if (isset($_SESSION['datoUsuario'])) {
     <!-- Scripts -->
     <script src="/scripts/main.js" defer></script>
     <script src="https://kit.fontawesome.com/e40dfd2f11.js" crossorigin="anonymous"></script>
+
 
 
 </head>
@@ -74,91 +74,83 @@ if (isset($_SESSION['datoUsuario'])) {
     <div class="all">
 
         <div class="title">
-            <h1>Personal Info</h1>
-            <h2>Basic info, like your name and photo</h2>
+            <a href="./personalInfo.php"><i class="fa-solid fa-angle-left"></i> Back </a>
         </div>
 
         <div class="container">
-            <!-- <div class="contenido"> -->
+
+
             <div class="encabezado">
-                <div class="encabezadoLeft">
-                    <h1>Profile</h1>
-                    <h2>Some info may be visible to other people</h2>
-                </div>
-
-                <div class="encabezadoRigth">
-                    <button class="edit"><a href="./editProfile.php">Edit</a></button>
-                </div>
-
+                <h1>Change Info</h1>
+                <h2>Changes will be reflected to every services</h2>
             </div>
-            <hr>
+
+
+
             <div class="primerArea">
-                <div class="izquierda">
-                    <h3>PHOTO</h3>
-                </div>
-                <div class="derecha">
+                <div class="izquierda1">
                     <?php if ($datoUsuario['photo'] != '') : ?>
                         <img src="./uploads/<?= $imgName ?>" alt="">
                     <?php endif ?>
+                    <a href="./uploadPhoto.php"><i class="fa-solid fa-camera"></i></a>
                 </div>
-            </div>
-            <hr>
-
-            <div class="areas">
-                <div class="izquierda">
-                    <h3>NAME</h3>
-                </div>
-                <div class="derecha">
-                    <p><?php echo ($datoUsuario['name']) ?></p>
-                </div>
-            </div>
-            <hr>
-            <div class="areas">
-                <div class="izquierda">
-                    <h3>BIO</h3>
-                </div>
-                <div class="derecha">
-                    <p><?php echo ($datoUsuario['bio']) ?></p>
-                </div>
-            </div>
-            <hr>
-            <div class="areas">
-                <div class="izquierda">
-                    <h3>PHONE</h3>
-                </div>
-                <div class="derecha">
-                    <p><?php echo ($datoUsuario['phone']) ?></p>
-                </div>
-            </div>
-            <hr>
-            <div class="areas">
-                <div class="izquierda">
-                    <h3>EMAIL</h3>
-                </div>
-                <div class="derecha">
-                    <p><?php echo ($datoUsuario['email']) ?></p>
-                </div>
-            </div>
-            <hr>
-
-            <div class="areaUltima">
-                <div class="izquierda">
-                    <h3>PASSWORD</h3>
-                </div>
-                <div class="derecha">
-                    <p>**********</p>
-
+                <div class="derecha1">
+                    <a href="./uploadPhoto.php">CHANGE PHOTO</a>
                 </div>
             </div>
 
-            <!-- </div> -->
+            <div class="editForm">
+                <form action="" method="post">
 
+                    <div class="area">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name...">
 
+                    </div>
 
+                    <div class="bioArea">
+                        <label for="bio">Bio</label>
+                        <input type="text" name="bio" id="bio" placeholder="Enter your bio...">
+                    </div>
 
+                    <div class="area">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" placeholder="Enter your phone...">
+                    </div>
 
+                    <div class="area">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email...">
+                    </div>
+
+                    <div class="area">
+                        <label for="pass">Bio</label>
+                        <input type="password" name="pass" id="pass" placeholder="Enter your pass...">
+                    </div>
+
+                    <button class="btn" type="submit">Save</button>
+
+                </form>
+
+            </div>
 
         </div>
+        <div class="credits">
+            <p>Created by </p>
+            <a href="https://www.linkedin.com/in/arturo-octavio-alvarez-zapata-b152571a3/" target="_blank">
+                <NAME>ArturoA
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</body>
 </body>
 
 </html>

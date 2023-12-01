@@ -1,9 +1,3 @@
-<?php
-require_once('scripts/conn.php');
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
