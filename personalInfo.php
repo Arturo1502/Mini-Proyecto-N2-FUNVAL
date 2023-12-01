@@ -38,7 +38,7 @@
                 </li>
                 <li class="dropdown">
                     <div class="contenidoDropDown">
-                        <button class="dropbtn" onclick="toggleDropdown()"><i class="fa fa-caret-down"></i></button>
+                        <button class="dropbtn" onclick="toggleDropdown()"><i id="flecha" class="fa fa-caret-down" ></i></button>
                         <div class="dropdown-content" id="dropdown-content">
                             <div class="contenidoDrop">
                                 <a href="#"><i class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i>My profile</a>

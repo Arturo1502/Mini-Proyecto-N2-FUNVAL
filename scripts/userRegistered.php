@@ -8,13 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $query = "INSERT INTO usuarios (`email`, `password`) VALUES (?, ?)";
-    
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$email, $password]);
 
-    try {
-        //code...
-    } catch (\Throwable $th) {
-        //throw $th;
-    }
     header('location:../personalInfo.php');
 }
 ?>

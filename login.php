@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +25,7 @@
     <link rel="stylesheet" href="/styles/stylelogin.css">
     <title>Login</title>
     <link rel="shortcut icon" href="/assets/devchallenges.png">
-    
+
 </head>
 
 <body>
@@ -40,7 +47,7 @@
                     <button class="submitRegister" type="submit">Login</button>
                 </form>
 
-                
+
             </div>
             <a class="forgotPass" href="">Forgot password?</a>
             <p class="conectWith">or continue with these social profile</p>
