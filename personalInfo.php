@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (isset($_SESSION['datoUsuario'])) {
+    $datoUsuario = $_SESSION['datoUsuario'];
+} else{
+    echo "No dato";
+    header('location: ./login.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
