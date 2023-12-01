@@ -2,8 +2,9 @@
 session_start();
 if (isset($_SESSION['datoUsuario'])) {
     $datoUsuario = $_SESSION['datoUsuario'];
-} else{
-    echo "No dato";
+    
+} else {
+    // echo "No dato";
     header('location: ./login.php');
 }
 
@@ -34,7 +35,7 @@ if (isset($_SESSION['datoUsuario'])) {
 </head>
 
 <body>
-<nav class="topnav responsive" id="myTopnav">
+    <nav class="topnav responsive" id="myTopnav">
         <div class="iconoNavbar">
             <img src="/assets/devchallenges.svg" alt="icono de Devchallenge">
         </div>
@@ -50,13 +51,13 @@ if (isset($_SESSION['datoUsuario'])) {
                 </li>
                 <li class="dropdown">
                     <div class="contenidoDropDown">
-                        <button class="dropbtn" onclick="toggleDropdown()"><i id="flecha" class="fa fa-caret-down" ></i></button>
+                        <button class="dropbtn" onclick="toggleDropdown()"><i id="flecha" class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content" id="dropdown-content">
                             <div class="contenidoDrop">
                                 <a href="#"><i class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i>My profile</a>
                                 <a href="#"><i class="fa-solid fa-user-group" style="color: #4f4e4e;"></i>Group chat</a>
-                                <div>_____________________</div>
-                                <a class="logout" href="#"><span class="material-symbols-outlined">exit_to_app</span>Logout</a>
+                                <hr>
+                                <a class="logout" href="./scripts/logout.php"><span class="material-symbols-outlined">exit_to_app</span>Logout</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +73,7 @@ if (isset($_SESSION['datoUsuario'])) {
         </div>
 
         <div class="container">
-            <div class="contenido">
+            <!-- <div class="contenido"> -->
                 <div class="encabezado">
                     <div class="encabezadoLeft">
                         <h1>Profile</h1>
@@ -82,8 +83,9 @@ if (isset($_SESSION['datoUsuario'])) {
                     <div class="encabezadoRigth">
                         <button class="edit"><a href="">Edit</a></button>
                     </div>
+                    
                 </div>
-
+                <hr>
                 <div class="primerArea">
                     <div class="izquierda">
                         <h3>PHOTO</h3>
@@ -92,55 +94,56 @@ if (isset($_SESSION['datoUsuario'])) {
                         <img src="./assets/Google.svg" alt="">
                     </div>
                 </div>
-
+                <hr>
 
                 <div class="areas">
                     <div class="izquierda">
                         <h3>NAME</h3>
                     </div>
                     <div class="derecha">
-                        <p>Nombre</p>
+                        <p><?php echo ($datoUsuario['photo'])?></p>
                     </div>
                 </div>
-
+                <hr>
                 <div class="areas">
                     <div class="izquierda">
                         <h3>BIO</h3>
                     </div>
                     <div class="derecha">
-                        <p>lorem</p>
+                        <p><?php echo ($datoUsuario['bio'])?></p>
                     </div>
                 </div>
-
+                <hr>
                 <div class="areas">
                     <div class="izquierda">
                         <h3>PHONE</h3>
                     </div>
                     <div class="derecha">
-                        <p>9595959595</p>
+                        <p><?php echo ($datoUsuario['phone'])?></p>
                     </div>
                 </div>
-
+                <hr>
                 <div class="areas">
                     <div class="izquierda">
                         <h3>EMAIL</h3>
                     </div>
                     <div class="derecha">
-                        <p>admin@admin.com</p>
+                        <p><?php echo ($datoUsuario['email'])?></p>
                     </div>
                 </div>
-
+                <hr>
 
                 <div class="areaUltima">
                     <div class="izquierda">
                         <h3>PASSWORD</h3>
                     </div>
                     <div class="derecha">
-                        <p>151515</p>
+                        <p>**********</p>
+
                     </div>
                 </div>
 
-            </div>
+            <!-- </div> -->
 
 
 

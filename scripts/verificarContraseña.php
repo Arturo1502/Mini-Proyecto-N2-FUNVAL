@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (password_verify($password, $result['password'])) {
                 session_start();
                 $_SESSION['datoUsuario'] = $result;
+                
                 header('Location: ../personalInfo.php');
             } else {
                 echo 'Password incorrecto';
@@ -30,3 +31,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo $e->getMessage();
     }
 }
+
+?>
