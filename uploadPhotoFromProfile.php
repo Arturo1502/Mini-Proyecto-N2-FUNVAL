@@ -9,6 +9,7 @@ if (isset($_SESSION['datoUsuario'])) {
     header('location: ./login.php');
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

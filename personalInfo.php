@@ -80,8 +80,8 @@ if (isset($_SESSION['mostrarAlerta'])) {
                         <button class="dropbtn" onclick="toggleDropdown()"><i id="flecha" class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content" id="dropdown-content">
                             <div class="contenidoDrop">
-                                <a href="#"><i class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i>My profile</a>
-                                <a href="#"><i class="fa-solid fa-user-group" style="color: #4f4e4e;"></i>Group chat</a>
+                                <a href="/personalInfo.php" class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i><p>My profile</p></a>
+                                <a href="#"><i class="fa-solid fa-user-group" style="color: #4f4e4e;"></i><p>Group chat</p></a>
                                 <hr>
                                 <a class="logout" href="./scripts/logout.php"><span class="material-symbols-outlined">exit_to_app</span>Logout</a>
                             </div>
@@ -175,12 +175,12 @@ if (isset($_SESSION['mostrarAlerta'])) {
             </div>
 
             <!-- </div> -->
-
-
-
-
-
-
+        </div>
+        <div class="credits">
+            <p>Created by </p>
+            <a href="https://www.linkedin.com/in/arturo-octavio-alvarez-zapata-b152571a3/" target="_blank">
+                <NAME>ArturoA
+            </a>
         </div>
 </body>
 

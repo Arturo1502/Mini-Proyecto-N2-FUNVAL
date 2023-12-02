@@ -83,6 +83,7 @@
     align-items: center;
     display: inline-block;
     margin: 14px 16px;
+    font-family: 'Noto Sans', sans-serif ;
 }
 
 .dropdown-content>.contenidoDrop>.logout {
@@ -91,6 +92,12 @@
 
 }
 
+
+.dropdown-content>.contenidoDrop>a>p{
+    font-family:  'Noto Sans', sans-serif;
+    font-weight: 400;
+    margin: 10px;
+} 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover,
 .dropdown:hover .dropbtn {
@@ -340,21 +347,14 @@ hr{
 }
 
 
-
-
-
-
-
-
-
 .credits {
     font-family: 'Noto Sans', sans-serif;
     color: #828282;
-    font-weight: 1000;
-    width: 29%;
+    font-weight: 400;
+    width: 100%;
     margin-top: -10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }

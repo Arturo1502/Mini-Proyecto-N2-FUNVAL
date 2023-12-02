@@ -6,7 +6,7 @@ $user_Id = $_SESSION['datoUsuario']['id'];;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
-    $password = $_POST['pass'];
+    $passwordhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $name = $_POST['name'];
     $bio = $_POST['bio'];
     $phone = $_POST['phone'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     try {
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$password, $name, $bio, $phone, $user_Id]);
+        $stmt->execute([$passwordhash, $name, $bio, $phone, $user_Id]);
 
         $sql = "SELECT * FROM usuarios WHERE `id` =?";
         $stm = $pdo->prepare($sql);

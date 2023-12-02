@@ -5,6 +5,7 @@ require_once('./conn.php');
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
 
+    
     // Verificar si el token existe en la base de datos y no ha expirado
     $query = "SELECT * FROM usuarios WHERE reset_token = ? AND reset_token_expiry > NOW()";
     $stmt = $pdo->prepare($query);

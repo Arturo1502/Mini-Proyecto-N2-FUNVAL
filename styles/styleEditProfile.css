@@ -186,7 +186,6 @@
 }
 
 
-
 .all {
     font-family: 'Noto Sans', sans-serif;
     display: flex;
@@ -311,7 +310,7 @@ form .area input {
 }
 
 form .bioArea input {
-
+    box-sizing: border-box;
     display: block;
     width: 50%;
     min-height: 110px;
@@ -320,6 +319,8 @@ form .bioArea input {
     padding: 10px 10px;
     font-size: 18px;
     border-radius: 12px;
+    white-space: nowrap;
+    overflow: scroll;
 }
 
 form label {
@@ -371,15 +372,20 @@ form label {
     height: 30px;
 }
 
+.dropdown-content>.contenidoDrop>a>p{
+    font-family:  'Noto Sans', sans-serif;
+    font-weight: 400;
+    margin: 10px;
+} 
 
 .credits {
     font-family: 'Noto Sans', sans-serif;
     color: #828282;
-    font-weight: 1000;
+    font-weight: 400;
     width: 100%;
     margin-top: -10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    justify-content: flex-start;
 }

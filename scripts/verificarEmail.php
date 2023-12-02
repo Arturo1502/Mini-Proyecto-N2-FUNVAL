@@ -31,6 +31,7 @@ if ($user) {
         exit();
     }
 
+    
     // Redirigir a la página de restablecimiento de contraseña con el token
     header("Location: ./resetPassword.php?token=" . urlencode($resetToken));
     exit();

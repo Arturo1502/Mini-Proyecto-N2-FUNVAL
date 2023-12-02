@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="/styles/stylelogin.css">
     <title>Login</title>
     <link rel="shortcut icon" href="/assets/devchallenges.png">
-
 </head>
 
 <body>

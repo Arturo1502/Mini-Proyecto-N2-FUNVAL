@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $baseUrl = '../uploads/';
     $imgName ="profile$user_Id.".$extension;
 
-
     move_uploaded_file($tmp, $baseUrl . $imgName);
 
 

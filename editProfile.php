@@ -6,8 +6,6 @@ if (isset($_SESSION['datoUsuario'])) {
         $imgName = $datoUsuario['photo'];
         // var_dump($datoUsuario);
     }
-
-    
 } else {
     // echo "No dato";
     header('location: ./login.php');
@@ -32,7 +30,7 @@ if (isset($_SESSION['datoUsuario'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Scripts -->
-    <script src="/scripts/main.js" defer></script>
+    <script src="./JS/main.js" defer></script>
     <script src="https://kit.fontawesome.com/e40dfd2f11.js" crossorigin="anonymous"></script>
 
 
@@ -61,8 +59,12 @@ if (isset($_SESSION['datoUsuario'])) {
                         <button class="dropbtn" onclick="toggleDropdown()"><i id="flecha" class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content" id="dropdown-content">
                             <div class="contenidoDrop">
-                                <a href="#"><i class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i>My profile</a>
-                                <a href="#"><i class="fa-solid fa-user-group" style="color: #4f4e4e;"></i>Group chat</a>
+                                <a href="/personalInfo.php" class="fa-solid fa-circle-user" style="color: #4f4e4e;"></i>
+                                    <p>My profile</p>
+                                </a>
+                                <a href="#"><i class="fa-solid fa-user-group" style="color: #4f4e4e;"></i>
+                                    <p>Group chat</p>
+                                </a>
                                 <hr>
                                 <a class="logout" href="./scripts/logout.php"><span class="material-symbols-outlined">exit_to_app</span>Logout</a>
                             </div>
@@ -111,7 +113,7 @@ if (isset($_SESSION['datoUsuario'])) {
 
                     <div class="bioArea">
                         <label for="bio">Bio</label>
-                        <input type="text" name="bio" id="bio" placeholder="Enter your bio..." required>
+                        <input class="tuncate" type="text" name="bio" id="bio" placeholder="Enter your bio..." required>
                     </div>
 
                     <div class="area">
@@ -121,7 +123,7 @@ if (isset($_SESSION['datoUsuario'])) {
 
                     <div class="area">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="<?=$datoUsuario['email']?>" disabled>
+                        <input type="email" name="email" id="email" value="<?= $datoUsuario['email'] ?>" disabled>
                     </div>
 
                     <div class="area">

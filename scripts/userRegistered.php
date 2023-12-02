@@ -9,13 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $passwordhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-
     $query = "INSERT INTO usuarios (`email`, `password`) VALUES (?, ?)";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$email, $passwordhash]);
-
-
-
     }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

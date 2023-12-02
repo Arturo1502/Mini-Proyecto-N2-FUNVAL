@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare($query);
             $stmt->execute([$token]);
 
+            
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {

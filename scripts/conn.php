@@ -5,6 +5,7 @@ $username = 'root';
 $password = '';
 $database = 'login_db';
 
+
 $dsn = "mysql:host=$hostname;dbname=$database";
 
 try {
