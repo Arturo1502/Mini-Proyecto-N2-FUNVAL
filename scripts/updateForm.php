@@ -11,13 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $bio = $_POST['bio'];
     $phone = $_POST['phone'];
 
-    $query = 'UPDATE `usuarios` SET `email`=?, `password`=?, `name`=?, `bio`=?, `phone`=? WHERE `id`=?';
+    $query = 'UPDATE `usuarios` SET `password`=?, `name`=?, `bio`=?, `phone`=? WHERE `id`=?';
 
 
 
     try {
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$email, $password, $name, $bio, $phone, $user_Id]);
+        $stmt->execute([$password, $name, $bio, $phone, $user_Id]);
 
         $sql = "SELECT * FROM usuarios WHERE `id` =?";
         $stm = $pdo->prepare($sql);

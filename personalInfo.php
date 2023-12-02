@@ -121,6 +121,9 @@ if (isset($_SESSION['mostrarAlerta'])) {
                         <img src="./uploads/<?= $imgName ?>" alt="">
                     <?php endif ?>
                 </div>
+                <div class="derecha1">
+                    <a href="./uploadPhotoFromProfile.php">CHANGE PHOTO</a>
+                </div>
             </div>
             <hr>
 

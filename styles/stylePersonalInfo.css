@@ -313,6 +313,27 @@ hr{
 }
 
 
+.izquierda1>a {
+    display: flex;
+    position: absolute;
+    font-size: 25px;
+    top: 25px;
+    left: 25px;
+    color: #BDBDBD;
+}
+
+.primerArea>.derecha1>a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    margin-left: 55px;
+    color: #828282;
+}
+
+
 
 
 

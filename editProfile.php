@@ -105,28 +105,28 @@ if (isset($_SESSION['datoUsuario'])) {
 
                     <div class="area">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your name...">
+                        <input type="text" name="name" id="name" placeholder="Enter your name..." required>
 
                     </div>
 
                     <div class="bioArea">
                         <label for="bio">Bio</label>
-                        <input type="text" name="bio" id="bio" placeholder="Enter your bio...">
+                        <input type="text" name="bio" id="bio" placeholder="Enter your bio..." required>
                     </div>
 
                     <div class="area">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" placeholder="Enter your phone...">
+                        <input type="text" name="phone" id="phone" placeholder="Enter your phone..." required>
                     </div>
 
                     <div class="area">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email...">
+                        <input type="email" name="email" id="email" value="<?=$datoUsuario['email']?>" disabled>
                     </div>
 
                     <div class="area">
                         <label for="pass">Password</label>
-                        <input type="password" name="pass" id="pass" placeholder="Enter your pass...">
+                        <input type="password" name="pass" id="pass" placeholder="Enter your pass..." required>
                     </div>
 
                     <button class="btn" type="submit">Save</button>

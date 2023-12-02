@@ -1,8 +1,9 @@
 # Partes adicionales que le agregué de manera personal.
-- En [Login](/scripts/login.php) , le agrugue un link para recuperar contraseña.
+- En [Login](/scripts/login.php) , le agrugue un link para recuperar contraseña y actualicé los scritps necesarios como una busqueda de su cuenta por medio de correo electronico, le agregue un toquen que dure 5 minutos yque pueda en ese periodo de tiempo actualizar su contraseña (para poder lograr eso, tuve que crear dos campos mas en mi base de datos).
 - Al title de las pestañas le agregue el icono de devchallenge.
 - En en index.php, como adicional, le coloque un enlace a los logos de cada red social, para que almenos tengan funcionalidad.
 - Le agregue un script de una libreria para que cuando sea el usuario recientemente registrado, le puda actualizar su informacion.
+- Le agregue algo importante que vi: en la parte de editar perfil, no me deberia permitir cambiar de correo, ya que es si id, por lo tanto esa opcion esta bloqueada, y ademas que ya tiene por defecto su correo.
 
 
 
