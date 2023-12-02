@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$email]);
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         echo $result['name'];
         if ($result) {
             if (password_verify($password, $result['password'])) {
@@ -22,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 header('Location: ../personalInfo.php');
             } else {
-                echo 'Password incorrecto';
+                
+                echo '<br> Password incorrecto';
             }
         } else{
             echo 'Usuario no registrado';

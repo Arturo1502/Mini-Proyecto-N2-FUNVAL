@@ -4,9 +4,10 @@ if (isset($_SESSION['datoUsuario'])) {
     $datoUsuario = $_SESSION['datoUsuario'];
     if (isset($datoUsuario['photo']) && ($datoUsuario['photo']) != '') {
         $imgName = $datoUsuario['photo'];
+        // var_dump($datoUsuario);
     }
 
-    // print_r($datoUsuario);
+    
 } else {
     // echo "No dato";
     header('location: ./login.php');

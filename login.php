@@ -69,3 +69,5 @@
 </body>
 
 </html>
+
+<!-- insertar alert para cuando no esta registrado -->
