@@ -30,31 +30,18 @@
                 </div>
 
                 <div class="subtitle">
-                    <h2>Login</h2>
-                    
+                    <h2>Find your account</h2>
+                    <p>Please enter your email to search for your account.</p>
                 </div>
-                <form action="./scripts/verificarContraseña.php" method="post">
+                <form action="./scripts/verificarEmail.php" method="post">
                     <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email">
 
-                    <input class="placeholderPass" type="password" name="password" id="password" placeholder="Password">
-
-                    <button class="submitRegister" type="submit">Login</button>
+                    <button class="submitRegister" type="submit">Search</button>
                 </form>
 
 
             </div>
-            <a class="forgotPass" href="./forgotpass.php">Forgot password?</a>
-            <p class="conectWith">or continue with these social profile</p>
-            <div class="redesSociales">
-                <buttom><img src="/assets/Google.svg" alt="logo de google"></buttom>
-                <buttom><img src="/assets/Facebook.svg" alt="logo de facebook"></buttom>
-                <buttom><img src="/assets/Twitter.svg" alt="logo de twitter"></buttom>
-                <buttom><img src="/assets/Gihub.svg" alt="logo de github"></buttom>
-            </div>
-            <div class="login">
-                <p>Already member?</p>
-                <a class="linkLogin" href="/index.php">Register</a>
-            </div>
+            
 
         </div>
         <div class="credits">
@@ -66,7 +53,3 @@
     </div>
 
 </body>
-
-</html>
-
-<!-- insertar alert para cuando no esta registrado -->
