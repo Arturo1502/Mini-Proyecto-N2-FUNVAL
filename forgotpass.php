@@ -23,6 +23,9 @@
 
 <body>
     <div class="all">
+        <div class="title">
+            <a href="./personalInfo.php"><i class="fa-solid fa-angle-left"></i> Back </a>
+        </div>
         <div class="container">
             <div class="content">
                 <div class="logo">
@@ -41,7 +44,7 @@
 
 
             </div>
-            
+
 
         </div>
         <div class="credits">

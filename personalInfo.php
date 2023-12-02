@@ -52,7 +52,7 @@ if (isset($_SESSION['mostrarAlerta'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Scripts -->
-    <script src="/scripts/main.js" defer></script>
+    <script src="./JS/main.js" defer></script>
     <script src="https://kit.fontawesome.com/e40dfd2f11.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
@@ -140,8 +140,8 @@ if (isset($_SESSION['mostrarAlerta'])) {
                 <div class="izquierda">
                     <h3>BIO</h3>
                 </div>
-                <div class="derecha">
-                    <p><?php echo ($datoUsuario['bio']) ?></p>
+                <div class="derechaBIO">
+                    <p class="tuncate"><?php echo ($datoUsuario['bio']) ?></p>
                 </div>
             </div>
             <hr>

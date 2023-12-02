@@ -4,6 +4,7 @@
 - En en index.php, como adicional, le coloque un enlace a los logos de cada red social, para que almenos tengan funcionalidad.
 - Le agregue un script de una libreria para que cuando sea el usuario recientemente registrado, le puda actualizar su informacion.
 - Le agregue algo importante que vi: en la parte de editar perfil, no me deberia permitir cambiar de correo, ya que es si id, por lo tanto esa opcion esta bloqueada, y ademas que ya tiene por defecto su correo.
+- En mi archivo de informacion personal, le agregue un link para actualizar solo la foto, porque si lo hago desde el boton edit, tendria que volver a actualizar toda la informacion y es un poco tedioso, por eso pense que sería mejor solamente tener esa opcion.
 
 
 

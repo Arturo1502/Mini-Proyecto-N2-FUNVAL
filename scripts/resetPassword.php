@@ -51,7 +51,7 @@ if (isset($_GET['token'])) {
                                 <input type="hidden" name="token" value="<?php echo $token; ?>">
 
                                 <label for="new_password">New Password:</label>
-                                <input class="placeholderEmail" type="password" name="new_password" id="new_password" placeholder="Write your new password">
+                                <input class="placeholderPass" type="password" name="new_password" id="new_password" placeholder="Write your new password">
 
 
                                 <label for="confirm_password">Confirm Password:</label>

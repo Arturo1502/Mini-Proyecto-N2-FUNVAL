@@ -25,6 +25,14 @@
     margin-right: auto;
 }
 
+.title a {
+    font-size: 19px;
+    font-weight: 550;
+    letter-spacing: -0.015em;
+    text-align: left;
+    text-decoration: none;
+    color: #2D9CDB;
+}
 
 .content {
     display: block;

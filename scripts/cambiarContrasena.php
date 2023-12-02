@@ -27,11 +27,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('location: ../resetSuccess.php');
                 exit();
             } else {
-                echo "Token inválido o expirado.";
+                echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+                echo '<script>';
+                echo 'document.addEventListener("DOMContentLoaded", function() {';
+                echo '  Swal.fire("Token invalido o expirado", "El token expiró intentelo nuevamente", "error")';
+                echo '    .then(() => window.location.href = "../forgotpass.php");';
+                echo '});';
+                echo '</script>';
                 exit();
             }
         } else {
-            echo "Las contraseñas no coinciden.";
+            echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+            echo '<script>';
+            echo 'document.addEventListener("DOMContentLoaded", function() {';
+            echo '  Swal.fire("Contraseña no coincide", "Las contraseñas ingresadas no coinciden", "error")';
+            echo '    .then(() => window.location.href = "../forgotpass.php");';
+            echo '});';
+            echo '</script>';
             exit();
         }
     } else {
@@ -42,4 +54,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Acceso no autorizado.";
     exit();
 }
-?>

@@ -13,11 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
 
-
+    
     <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     <link rel="stylesheet" href="/styles/stylelogin.css">
+
+
     <title>Login</title>
     <link rel="shortcut icon" href="/assets/devchallenges.png">
+
+
 
 </head>
 
@@ -31,7 +36,7 @@
 
                 <div class="subtitle">
                     <h2>Login</h2>
-                    
+
                 </div>
                 <form action="./scripts/verificarContraseña.php" method="post">
                     <input class="placeholderEmail" type="text" name="email" id="email" placeholder="Email">

@@ -15,10 +15,10 @@ function toggleDropdown() {
     let flecha = document.getElementById('flecha')
     flecha.classList.toggle("fa-caret-down");
     flecha.classList.toggle('fa-caret-up');
-    
+
 }
 
-document.getElementById('flecha').onclick = function(event) {
+document.getElementById('flecha').onclick = function (event) {
     event.stopPropagation(); // Evitar que el evento llegue al window.onclick
     toggleDropdown();
 }
@@ -26,7 +26,7 @@ document.getElementById('flecha').onclick = function(event) {
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
-        
+
         let i;
         for (i = 0; i < dropdowns.length; i++) {
             let openDropdown = dropdowns[i];
@@ -39,3 +39,16 @@ window.onclick = function (event) {
         flecha.classList.add('fa-caret-down');
     }
 };
+
+
+const text = document.querySelector('.tuncate');
+const textcontent = text.textContent;
+
+const truncateStr = (str, num) => {
+    if (str.length <= num) {
+        return str;
+    }
+    return `${str.slice(0, num)} ...`;
+};
+
+text.innerHTML = truncateStr(textcontent,40)

@@ -287,7 +287,7 @@ hr{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
+
     width: 90%;
 }
 
@@ -305,6 +305,12 @@ hr{
     margin-left: 120px;
 }
 
+.derechaBIO{
+    width: 400px;
+    margin-left: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .photouser > img{
     object-fit: cover;
