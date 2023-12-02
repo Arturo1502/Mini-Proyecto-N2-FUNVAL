@@ -10,6 +10,25 @@ if (isset($_SESSION['datoUsuario'])) {
 } else {
     // echo "No dato";
     header('location: ./login.php');
+    exit();
+}
+// Verificar si se estableció la variable de sesión de alerta
+if (isset($_SESSION['mostrarAlerta'])) {
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    title: "¡Bienvenido!",
+                    text: "Por favor, actualiza tu información.",
+                    icon: "warning",
+                    confirmButtonText: "Aceptar"
+                }).then(() => {
+                    window.location.href = "editProfile.php";
+                });
+            });
+         </script>';
+
+    // Después de mostrar la alerta, elimina la variable de sesión para que no se muestre nuevamente
+    unset($_SESSION['mostrarAlerta']);
 }
 
 ?>
@@ -28,13 +47,14 @@ if (isset($_SESSION['datoUsuario'])) {
     <link rel="stylesheet" href="/styles/stylePersonalInfo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Scripts -->
     <script src="/scripts/main.js" defer></script>
     <script src="https://kit.fontawesome.com/e40dfd2f11.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
 
@@ -87,7 +107,7 @@ if (isset($_SESSION['datoUsuario'])) {
                 </div>
 
                 <div class="encabezadoRigth">
-                    <button class="edit"><a href="./editProfile.php">Edit</a></button>
+                    <button class="edit" onclick="location.href='./editProfile.php'"><a href="./editProfile.php">Edit</a></button>
                 </div>
 
             </div>

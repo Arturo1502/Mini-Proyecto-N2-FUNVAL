@@ -2,6 +2,8 @@
 - En [Login](/scripts/login.php) , le agrugue un link para recuperar contraseña.
 - Al title de las pestañas le agregue el icono de devchallenge.
 - En en index.php, como adicional, le coloque un enlace a los logos de cada red social, para que almenos tengan funcionalidad.
+- Le agregue un script de una libreria para que cuando sea el usuario recientemente registrado, le puda actualizar su informacion.
+
 
 
 

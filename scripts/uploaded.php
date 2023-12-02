@@ -8,12 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $tmp = ($_FILES['photo']['tmp_name']);
     $baseName = basename($_FILES['photo']['name']);
-    $extension = pathinfo($tmp, PATHINFO_EXTENSION); //para obtener la extensión del archivo
+    $extension = pathinfo($baseName, PATHINFO_EXTENSION); //para obtener la extensión del archivo
     $baseUrl = '../uploads/';
+    $imgName ="profile$user_Id.".$extension;
 
 
 
-    move_uploaded_file($tmp, $baseUrl . $baseName);
+    move_uploaded_file($tmp, $baseUrl . $imgName);
 }
 
 $query = 'UPDATE `usuarios` SET photo=? WHERE id=?';
@@ -33,9 +34,11 @@ try {
 
     header('location: ../personalInfo.php'); 
 
-
+//falta cambiar el nombre de la foto por un id
     
 
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
+
+?>

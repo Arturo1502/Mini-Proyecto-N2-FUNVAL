@@ -100,7 +100,7 @@ if (isset($_SESSION['datoUsuario'])) {
             </div>
 
             <div class="editForm">
-                <form action="" method="post">
+                <form action="./scripts/updateForm.php" method="post">
 
                     <div class="area">
                         <label for="name">Name</label>
@@ -124,7 +124,7 @@ if (isset($_SESSION['datoUsuario'])) {
                     </div>
 
                     <div class="area">
-                        <label for="pass">Bio</label>
+                        <label for="pass">Password</label>
                         <input type="password" name="pass" id="pass" placeholder="Enter your pass...">
                     </div>
 
