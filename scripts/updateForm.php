@@ -6,7 +6,7 @@ $user_Id = $_SESSION['datoUsuario']['id'];;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
-    $passwordhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $passwordhash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
     $name = $_POST['name'];
     $bio = $_POST['bio'];
     $phone = $_POST['phone'];
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $result = $stm->fetch(PDO::FETCH_ASSOC);
 
-        var_dump($result);
+        
         $_SESSION['datoUsuario'] = $result;
 
 

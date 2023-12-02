@@ -1,0 +1,170 @@
+.root {
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body.darkmode {
+    background-color: #252228;
+    color: #E0E0E0;
+    /* Agrega estilos adicionales para el modo oscuro según tus necesidades */
+}
+
+.light{
+    display: none;
+}
+
+.dark{
+    display: block;
+}
+
+.container.darkmode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #BDBDBD;
+    border-radius: 24px;
+    width: 473.83px;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    width: 473.83px;
+    margin-top: 197px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    display: block;
+    width: 357px;
+    margin: 48px 52px;
+}
+
+.subtitle.darkmode {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #E0E0E0;
+    letter-spacing: -0.035em;
+    text-align: left;
+}
+
+.parrafo.darkmode {
+    width: 318.8px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 1000;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #E0E0E0;
+}
+
+
+
+
+.placeholderEmail.darkmode {
+    text-align: center;
+    width: 100%;
+    margin-top: 24.66px;
+    margin-bottom: 14.5px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+}
+
+.placeholderEmail::placeholder {
+    background-image: url(/assets/mail_iconsvg.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+}
+
+.placeholderPass.darkmode {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 14.5px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+
+}
+
+.placeholderPass::placeholder {
+    background-image: url(/assets/password.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+}
+
+.submitRegister.darkmode {
+    width: 356.48px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: #2F80ED;
+    color: #FFFFFF;
+
+}
+
+.conectWith {
+    margin-top: -15px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 1000;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+}
+
+.redesSociales{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+
+
+.login.darkmode{
+    width: 34%;
+    font-family: 'Noto Sans', sans-serif;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    margin-bottom: 25px;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.linkLogin{
+    text-decoration: none;
+    color: #2D9CDB;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 14px;
+}
+
+.credits.darkmode{
+    font-family: 'Noto Sans', sans-serif;
+    color: #E0E0E0;
+    font-weight: 1000;
+    width: 29%;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

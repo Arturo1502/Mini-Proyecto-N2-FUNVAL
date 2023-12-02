@@ -15,8 +15,17 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./styles/styleIndex.css">
+    <link rel="stylesheet" href="/styles/darkmode.css" id="dark-mode-stylesheet">
+
+
+    <!-- JS -->
+    <script src="./JS/darkmode.js" defer></script>
+
     <title>REGISTER</title>
     <link rel="shortcut icon" href="/assets/devchallenges.png">
+
+
+
 </head>
 
 <body>
@@ -24,7 +33,8 @@
         <div class="container">
             <div class="content">
                 <div class="logo">
-                    <img src="./assets/devchallenges.svg" alt="devchallenge icon">
+                    <img class="light" src="./assets/devchallenges.svg" alt="devchallenge icon">
+                    <img class="dark" src="./assets/devchallenges-light.svg" alt="devchallenge ligth icon">
                 </div>
 
                 <div class="subtitle">
@@ -63,6 +73,10 @@
                 <NAME>ArturoA
             </a>
         </div>
+<!-- 
+        <div>
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        </div> -->
     </div>
 
 </body>

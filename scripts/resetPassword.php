@@ -59,7 +59,7 @@ if (isset($_GET['token'])) {
                                 <input class="placeholderPass" type="password" name="confirm_password" id="confirm_password" placeholder="Repeat your new password">
 
 
-                                <button type="submitRegister" type="submit">Reset Password</button>
+                                <button class="submitRegister" type="submit" type="submit">Reset Password</button>
                             </form>
                         </div>
                     </div>
