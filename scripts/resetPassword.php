@@ -5,7 +5,7 @@ require_once('./conn.php');
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
 
-    
+
     // Verificar si el token existe en la base de datos y no ha expirado
     $query = "SELECT * FROM usuarios WHERE reset_token = ? AND reset_token_expiry > NOW()";
     $stmt = $pdo->prepare($query);
@@ -78,13 +78,25 @@ if (isset($_GET['token'])) {
 <?php
         exit();
     } else {
-        // Token inválido o expirado
-        echo "Invalid or expired token.";
+
+        echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+        echo '<script>';
+        echo 'document.addEventListener("DOMContentLoaded", function() {';
+        echo '  Swal.fire("Token invalido", "El token ingresado no es válido o no es el correcto", "error")';
+        echo '    .then(() => window.location.href = "../login.php");';
+        echo '});';
+        echo '</script>';
         exit();
     }
 } else {
-    // El token no está presente en la URL
-    echo "Token not provided.";
+
+    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+    echo '<script>';
+    echo 'document.addEventListener("DOMContentLoaded", function() {';
+    echo '  Swal.fire("Acceso denegado", "El token no está presente.", "error")';
+    echo '    .then(() => window.location.href = "../login.php");';
+    echo '});';
+    echo '</script>';
     exit();
 }
 ?>

@@ -11,11 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$stmt->execute()) {
         // Manejo de error
-        echo "Error al buscar el correo electrónico";
-        exit();
+        showSweetAlertError("Error al buscar el correo electrónico", "../forgotpass.php");
     }
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$user) {
+        // El correo electrónico no está registrado
+        showSweetAlertError("Correo electrónico no registrado", "../forgotpass.php");
+    }
 }
 
 if ($user) {
@@ -27,12 +31,22 @@ if ($user) {
 
     if (!$stmt->execute([$resetToken, $expiryTime, $email])) {
         // Manejo de error
-        echo "Error al actualizar el token";
-        exit();
+        showSweetAlertError("Error al actualizar el token", "../forgotpass.php");
     }
 
     // Redirigir a la página de restablecimiento de contraseña con el token
     header("Location: ./resetPassword.php?token=" . urlencode($resetToken));
+    exit();
+}
+
+function showSweetAlertError($message, $redirectLocation) {
+    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+    echo '<script>';
+    echo 'document.addEventListener("DOMContentLoaded", function() {';
+    echo '  Swal.fire("Error", "' . $message . '", "error")';
+    echo '    .then(() => window.location.href = "' . $redirectLocation . '");';
+    echo '});';
+    echo '</script>';
     exit();
 }
 ?>

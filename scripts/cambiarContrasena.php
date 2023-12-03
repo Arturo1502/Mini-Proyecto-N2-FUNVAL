@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare($query);
             $stmt->execute([$token]);
 
-            
+
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
@@ -48,10 +48,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
     } else {
-        echo "Datos incompletos.";
+        echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+        echo '<script>';
+        echo 'document.addEventListener("DOMContentLoaded", function() {';
+        echo '  Swal.fire("Datos incompletos", "No estan completos los datos", "alert")';
+        echo '    .then(() => window.location.href = "../forgotpass.php");';
+        echo '});';
+        echo '</script>';
         exit();
     }
 } else {
-    echo "Acceso no autorizado.";
+    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+    echo '<script>';
+    echo 'document.addEventListener("DOMContentLoaded", function() {';
+    echo '  Swal.fire("Acceso denegado", "Acceso denegado", "error")';
+    echo '    .then(() => window.location.href = "../forgotpass.php");';
+    echo '});';
+    echo '</script>';
     exit();
 }
